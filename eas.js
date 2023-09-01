@@ -2,9 +2,25 @@ function mousedover(e) {
     this.style.backgroundColor = "black";
 }
 
+function resetpressed(e) {
+    console.log(e);
+    console.log(this);
+}
+
+function resizepressed(e) {
+    console.log(e);
+    console.log(this);
+}
+
 const pixels = document.querySelector(".pixels");
 const dim = 256;
-const side_num = 32;
+const side_num = 64;
+
+const resetbutton = document.querySelector(".reset");
+resetbutton.addEventListener("click", resetpressed);
+
+const resizebutton = document.querySelector(".resize");
+resizebutton.addEventListener("click", resizepressed);
 
 pixels.style.width = `${dim}px`;
 pixels.style.height = `${dim}px`;

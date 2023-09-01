@@ -34,6 +34,12 @@ body {
     align-items: center;
 }
 
+.buttons {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
 .pixels {
     display: flex;
     flex-direction: column;
