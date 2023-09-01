@@ -7,8 +7,24 @@ function resetpressed(e) {
 }
 
 function resizepressed(e) {
-    console.log(e);
-    console.log(this);
+    let usernum = prompt("Enter a new grid size between 1 and 128");
+    if (usernum === null)
+        return;
+    usernum = parseInt(usernum);
+
+    while (usernum === NaN || usernum < 1 || usernum > 128){
+        usernum = prompt(`Sorry, ${usernum} is not a valid size. Enter a new size between 1 and 128.`);
+        if (usernum === null)
+            return;
+        usernum = parseInt(usernum);
+    }
+
+    if (usernum === null)
+        return;
+
+    side_num = usernum;
+
+    resetGrid();
 }
 
 function resetGrid() {
